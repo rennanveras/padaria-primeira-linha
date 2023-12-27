@@ -25,13 +25,12 @@ const Cart = () => {
     dispatch(decrement({ id }))
   };
 
+  const handleRemoveItem = (id) => {
+    dispatch(remove(id))
+  };
 
   const handleSumItems = (price, quantity) => {
     return price * quantity;
-  };
-
-  const handleRemoveItem = (id) => {
-    dispatch(remove(id))
   };
 
   return (

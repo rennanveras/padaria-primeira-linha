@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { ButtonDefault } from "../../styles"
 import * as S from './styles'
 
@@ -14,7 +15,7 @@ const SectionKitParty = () => (
       </p>
     </div>
     <div>
-      <ButtonDefault>Fazer pedido</ButtonDefault>
+      <ButtonDefault as={Link} to={'/cardapio'}>Fazer pedido</ButtonDefault>
     </div>
   </S.containerKitParty>
 )

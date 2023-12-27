@@ -1,5 +1,5 @@
 import Experience from '../../components/Experience'
-import Header from '../../components/Header'
+import Header from '../../container/Header'
 import Hero from '../../components/Hero'
 import Infos from '../../components/Info'
 import Slide from '../../components/Slider'

@@ -65,6 +65,10 @@ export const CartItem = styled.li`
       width: 100%;
     }
   }
+
+  .teste {
+    width: 100%;
+  }
 `
 
 export const StyledInputGroup = styled.div`

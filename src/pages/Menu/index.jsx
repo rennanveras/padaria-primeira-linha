@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Header from "../../components/Header"
-import ProductList from "../../components/ProductList"
+import Header from "../../container/Header"
+import ProductList from "../../container/ProductList"
 import Footer from "../../container/Footer"
 
 import foto1 from '../../assets/images/padariaprimeiralinha_1.jpeg'
