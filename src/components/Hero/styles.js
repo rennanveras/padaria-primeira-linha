@@ -46,4 +46,8 @@ export const BannerHero = styled.div`
     width: 100%;
     height: 380px;
   }
+
+  @media (max-width: 768px) {
+    height: 280px;
+  }
 `

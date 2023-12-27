@@ -20,6 +20,7 @@ export const NavLinksFooter = styled.nav`
     display: flex;
     gap: 54px;
     text-align: center;
+    padding: 0;
     
     @media (max-width: 600px) {
       flex-direction: column;

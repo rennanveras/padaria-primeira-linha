@@ -1,15 +1,26 @@
-import logo from '../../assets/images/logo.png'
+import { useState } from 'react'
 
-import * as S from './styles'
+import { Link } from 'react-router-dom'
 
 import { BsCart } from 'react-icons/bs'
 import { IoPersonOutline } from 'react-icons/io5'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+
+import * as S from './styles'
+
+import { open } from '../../store/reducers/cart'
+
+import logo from '../../assets/images/logo.png'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Header = () => {
   const [menuIsOpen, setmenuIsOpen] = useState(false)
+  const dispatch = useDispatch()
+  const { items } = useSelector((state) => state.cart)
+
+  const openCart = () => {
+    dispatch(open())
+  }
 
   const navLink = [
     {
@@ -29,7 +40,7 @@ const Header = () => {
       link: '/contato'
     }
   ]
-  
+
   return (
     <>
       <S.HeaderContainer className='container'>
@@ -50,12 +61,10 @@ const Header = () => {
                 <IoPersonOutline size={24} color={`#000`} />
               </div>
             </Link>
-            <Link to={'/carrinho'}>
-              <div className="area-carrinho">
-                <BsCart size={24} color={`#000`} />
-                <span>2</span>
-              </div>
-            </Link>
+            <a onClick={openCart} className="area-carrinho">
+              <BsCart size={24} color={`#000`} />
+              <span>{items.length}</span>
+            </a>
           </S.IconsContainer>
           <S.BtnMenuHamburguer>
             {menuIsOpen ? (
@@ -73,7 +82,7 @@ const Header = () => {
             )}
           </S.BtnMenuHamburguer>
         </S.ContentItens>
-      
+
       </S.HeaderContainer>
       {menuIsOpen &&
         <S.MenuMobile className={menuIsOpen ? 'is-open' : ''}>

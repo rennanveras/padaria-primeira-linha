@@ -134,13 +134,13 @@ const FormRegister = () => {
                 >
                   Login
                 </ButtonForm>
-                <ButtonForm
-                  type="button"
+                <ButtonForm as={Link}
+                  to={'/adm'}
                   onClick={handleLogin}
-                  className="rounded-5"
-                  style={{ width: '100%' }}
+                  className="rouded-5"
+                  style={{ width: '100%', textAlign: 'center' }}
                 >
-                  Cadastrar
+                  Acessar
                 </ButtonForm>
               </div>
             </AreaForm>

@@ -25,10 +25,14 @@ export const StyleGlobal = createGlobalStyle`
       padding: 0 20px;
     }
   }
+
+  ul {
+    padding: 0;
+  }
 `
 
 export const ButtonDefault = styled.button`
-  padding: 10px 30px;
+  padding: 6px 12px;
   font-size: 18px;
   border-radius: 4px;
   border: 1px solid #4A1D1F;
@@ -51,7 +55,11 @@ export const ButtonDefault = styled.button`
     &:hover {
     background-color: #4A1D1F;
     color: #FBEDCD;
+    }
   }
+
+  &.small {
+    font-size: 12px;
   }
 `
 

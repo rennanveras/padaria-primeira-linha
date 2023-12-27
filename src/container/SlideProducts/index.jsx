@@ -15,6 +15,7 @@ import CardSlide from '../../components/CardSlide';
 
 import img from '../../assets/images/item-slide.png'
 import img2 from '../../assets/images/item-slide2.png'
+import { Link } from 'react-router-dom';
 
 
 const SlideProducts = () => {
@@ -71,7 +72,7 @@ const SlideProducts = () => {
           },
           550: {
             slidesPerView: 2,
-            spaceBetween: 40,
+            spaceBetween: 30,
           },
           1024: {
             slidesPerView: 4,
@@ -88,9 +89,16 @@ const SlideProducts = () => {
         ))}
       </Swiper>
 
-      <S.BtnSlide className='transparent'>
-        Ver mais <MdArrowRightAlt fontSize={30} />
-      </S.BtnSlide>
+      <div className='area-button'>
+        <S.BtnSlide
+          className='transparent'
+          as={Link}
+          style={{ display: 'inline-block' }}
+          to={'/cardapio'}
+        >
+          Ver mais <MdArrowRightAlt fontSize={30} />
+        </S.BtnSlide>
+      </div>
     </S.ContentSlideProduct>
   )
 }

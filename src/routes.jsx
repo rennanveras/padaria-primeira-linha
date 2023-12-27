@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Menu from './pages/Menu'
+import Adm from './pages/Adm'
 
 const Rotas = () => (
   <>
@@ -13,7 +14,8 @@ const Rotas = () => (
       <Route path="/cadastro" element={<Register />} />
       <Route path="/cardapio" element={<Menu />} />
       <Route path="/sobre-nos" element={<Register />} />
-      <Route path="/Contato" element={<Register />} />
+      <Route path="/contato" element={<Register />} />
+      <Route path="/adm" element={<Adm />} />
     </Routes>
   </>
 )

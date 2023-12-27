@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ContainerSlide = styled.section`
-margin: 20px 0;
+margin: 60px 0;
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -20,9 +20,10 @@ margin: 20px 0;
   }
 
   @media (max-width: 768px) {
-    width: 80%;
+    width: 100%;
     height: auto;
   }
+
 }
 
 .swiper-slide img {
@@ -30,7 +31,6 @@ margin: 20px 0;
   display: block;
   width: 100%;
   border-radius: 30px;
-
 }
 
 `

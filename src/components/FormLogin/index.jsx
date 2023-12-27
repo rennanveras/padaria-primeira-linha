@@ -108,11 +108,11 @@ const FormLogin = () => {
                 >
                   Cadastrar
                 </ButtonForm>
-                <ButtonForm
-                  type="button"
+                <ButtonForm as={Link}
+                  to={'/adm'}
                   onClick={handleLogin}
                   className="rouded-5"
-                  style={{ width: '100%' }}
+                  style={{ width: '100%', textAlign: 'center' }}
                 >
                   Acessar
                 </ButtonForm>

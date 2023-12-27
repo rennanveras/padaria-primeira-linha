@@ -62,7 +62,7 @@ export const IconsContainer = styled.div`
       color: white;
       display: flex;
       align-items: center;
-      font-size: 11px;
+      font-size: 10px;
       border-radius: 50%;
       justify-content: center;
     }

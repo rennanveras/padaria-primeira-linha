@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import imgHero from '../../assets/images/banner.png'
 import { ButtonDefault } from '../../styles'
 
@@ -17,8 +18,8 @@ const Hero = () => {
         </div>
         <p>27 anos de tradição e sabor fresquinho todos os dias!</p>
         <div className='content-button'>
-          <ButtonDefault>Pedir agora</ButtonDefault>
-          <ButtonDefault className='transparent'>Menu</ButtonDefault>
+          <ButtonDefault as={Link} to={'/cardapio'}>Pedir agora</ButtonDefault>
+          <ButtonDefault as={Link} to={'/cardapio'} className='transparent'>Menu</ButtonDefault>
         </div>
       </S.ContentInfos>
       <S.BannerHero style={{ backgroundImage: `url(${imgHero})` }}></S.BannerHero>
